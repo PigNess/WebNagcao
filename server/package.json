@@ -6,7 +6,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^7.5.3",
     "nodemailer": "^6.9.5",
-    "cors": "^2.8.5",
+    "cors": "^2.8.5"
   },
   "scripts": {
     "build": "(npm install) && (cd ../client-admin-vite && npm install && npm run build) && (cd ../client-customer-vite && npm install && npm run build)",
