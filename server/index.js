@@ -19,6 +19,14 @@ app.get('/hello', (req, res) => {
 });
 app.use('/api/admin', require('./api/admin.js'));
 app.use('/api/customer', require('./api/customer.js'));
+app.use('/admin', express.static(path.resolve(__dirname, '../client-admin-vite/build')));
+app.get('admin/*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client-admin-vite/build', 'index.html'))
+});
+app.use('/', express.static(path.resolve(__dirname, '../client-customer-vite/build')));
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client-customer-vite/build', 'index.html'));
+});
 // Start server
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
