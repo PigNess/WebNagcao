@@ -1,0 +1,79 @@
+:root {
+  --color-primary: #4a3525;      /* Dark brown */
+  --color-secondary: #8b6d55;    /* Medium brown */
+  --color-accent: #c9a07a;       /* Light brown/gold */
+  --color-bg-light: #fdfaf6;     /* Very light beige */
+  --color-bg-card: #ffffff;      /* White */
+  --color-text-main: #33261d;    /* Very dark brown/black */
+  --color-text-muted: #6b5c51;   /* Muted brown for secondary text */
+  --color-border: #e8ded3;       /* Light border */
+  --color-footer-bg: #3c2a1d;    /* Footer dark background */
+  --color-danger: #d9534f;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --padding-container: 4rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--padding-container);
+}
+
+/* Common UI Elements */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-outline {
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
